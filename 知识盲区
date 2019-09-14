@@ -11,4 +11,8 @@ https://www.cnblogs.com/empty16/p/6229538.html
 2. Python class中的__call__（）方法
    Python中，如果在创建class的时候写了call（）方法， 那么该class实例化出实例后， 实例名()就是调用call（）方法。实例化后，对象也可以像函数一样使用。
    
-3. 
+3. transform.resize（）： 
+   Returns
+    -------
+    resized : ndarray
+        Resized version of the input.
