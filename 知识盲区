@@ -16,3 +16,4 @@ https://www.cnblogs.com/empty16/p/6229538.html
     -------
     resized : ndarray
         Resized version of the input.
+4. type(tsfrm).__name__  # 将type(tsfrm): <class 'torchvision.transforms.transforms.Compose'>转化为 Compose
