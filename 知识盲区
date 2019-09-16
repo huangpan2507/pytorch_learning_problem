@@ -17,3 +17,13 @@ https://www.cnblogs.com/empty16/p/6229538.html
     resized : ndarray
         Resized version of the input.
 4. type(tsfrm).__name__  # 将type(tsfrm): <class 'torchvision.transforms.transforms.Compose'>转化为 Compose
+
+5. Python os.path.rsplit()
+   在python分割时，有时候不是把整个字符分割，而是只分割部分，例如：我要分割文件路径，只想把最后的文件名去除，保留文件夹的路径。例如：/home/username/data/text.txt  我想要得到/home/username/data/。如果用split则会把整个分割成一个list，但是可以使用rsplit。
+   path = /home/username/data/text.txt  
+   path.split("/")
+ 
+   ["home","username","data","text.txt "]
+   ## 而使用rsplit：
+   path.rsplit("/",1)
+   ["/home/username/data","text.txt "]
