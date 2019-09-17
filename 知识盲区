@@ -45,3 +45,5 @@ for file in path_list:
     filename = os.path.splitext(file)[0]          # 去除扩展名
     im.save(root_dir + filename + '.jpg')
     i += 1
+
+8.怎么查看图片像素值数据
