@@ -47,3 +47,33 @@ for file in path_list:
     i += 1
 
 8.怎么查看图片像素值数据
+from PIL import Image
+import itertools
+
+img_png = Image.open('D:/Firefox_Download/pokemon_images/images/comfey.png').convert('L')
+img_jpg = Image.open('D:/Firefox_Download/pokemon_images/images/images/comfey.jpg').convert('L')
+# 打开图片,convert图像类型有L,RGBA
+height_png, width_png = img_png.size[:2]
+height_jpg, width_jpg = img_jpg.size[:2]
+print(height_png, width_png)
+print(height_jpg, width_jpg)
+# 遍历像素点
+
+for x in range(height_jpg):
+    for y in range(width_jpg):
+        # print(img_jpg.getpixel((x, y)))
+        if img_jpg.getpixel((x, y)) == 0:
+            print(img_jpg.getpixel((x, y)))
+
+        else:
+            print('tt')
+            
+            
+            
+ 9.numpy中数据类型统一转换成float，object也可以转换  https://blog.csdn.net/qq_34199259/article/details/97255280
+     arr = np.array([1, 2, 3, 4, 5]) # 创建一个 默认 int32 类型的数组
+    float_arr = arr.astype(np.float64) # 将这个数组转化为 float64 位的数组
+    print(float_arr.dtype) # 打印这个数组的类型，出结果float64
+
+搞了一上午，处理的numpy数据里一直报有object，然而我要全弄成float的，试了各种数据类型转换，还好没放弃，终于找到一个对的方法，因为我要训练的网络不要double的，所以代码float_arr = arr.astype(np.float64)改成float_arr = arr.astype(np.float32)即可。
+
